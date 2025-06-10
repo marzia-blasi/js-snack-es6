@@ -44,4 +44,4 @@ console.log(minBike["name"]);
 //.innerText; su h2
 document.getElementById(
   "bike"
-).innerText = ` La bici con il costo minore è ${minBike["name"]}`;
+).innerText = ` La bici più leggera è ${minBike["name"]} infatti il suo peso è di ${minBike.weight}`;
