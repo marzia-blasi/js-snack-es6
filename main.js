@@ -62,24 +62,61 @@ Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “
 // stamparlo in console
 
 const championsSq = [
+  // 0 - championsSq[0]
   {
     nome: "napoli",
-    punti: "",
-    falli: "",
+    punti: 0,
+    falli: 0,
   },
+  //1 - championsSq[1]
   {
     nome: "bologna",
-    punti: "",
-    falli: "",
+    punti: 0,
+    falli: 0,
   },
+  // 2 - .nome , .punti, .falli
   {
     nome: "roma",
-    punti: "",
-    falli: "",
+    punti: 0,
+    falli: 0,
   },
+  // 3
   {
     nome: "milano",
-    punti: "",
-    falli: "",
+    punti: 0,
+    falli: 0,
   },
 ];
+
+//const puntiRandom = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+
+//const falliRandom = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+
+// console.log(puntiRandom, falliRandom);
+
+championsSq.punti = 34;
+
+console.log(championsSq);
+
+for (const i in championsSq) {
+  console.log(i, championsSq[i], championsSq[i].nome);
+  championsSq[i].punti = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+}
+
+for (const champion of championsSq) {
+  console.log(champion, champion.nome);
+  champion.falli = Math.floor(Math.random() * (30 - 1 + 1)) + 1;
+}
+
+console.log(championsSq);
+
+const nuoveSquadre = [];
+
+for (const squadra of championsSq) {
+  nuoveSquadre.push({
+    newName: squadra.nome,
+    newPunti: squadra.falli,
+  });
+}
+
+console.log(nuoveSquadre);
